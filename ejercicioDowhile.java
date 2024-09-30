@@ -22,7 +22,7 @@ public class ejercicioDowhile {
 
         System.out.println("****************************************************");
 
-        for (int k = 1; i < 5; i++) {
+        for (int k = 1; k > 5; i++) {
             System.out.println(cad);
         }
     }
