@@ -24,5 +24,43 @@ public class PUNTO510 {
                 break;
             }
         }
+        contadorDias++;
+
+        if (temperaturaMaxima == 9) { 
+            contadorErrores++;
+        }
+        if (temperaturaMinima == 9) {
+            contadorErrores++;
+        }
+        sumaMaxima += temperaturaMaxima;
+        sumaMinima += temperaturaMinima;
+
+        if (contadorDias > 0) {
+            mediaMaxima = sumaMaxima / contadorDias;
+        } else {
+            mediaMaxima = 0;
+        }
+        
+        if (contadorDias > 0) {
+            mediaMinima = sumaMinima / contadorDias;
+        } else {
+            mediaMinima = 0;
+        }
+
+       
+       
+
+        if (contadorDias > 0) {
+            porcentajeErrores = (contadorErrores / (contadorDias * 2.0)) * 100;
+        } else {
+            porcentajeErrores = 0;
+        }
+
+        
+        System.out.println("Número de días: " + contadorDias);
+        System.out.println("Media de temperaturas máximas: " + mediaMaxima);
+        System.out.println("Media de temperaturas mínimas: " + mediaMinima);
+        System.out.println("Número de errores (temperaturas de 9°): " + contadorErrores);
+        System.out.println("Porcentaje de errores: " + porcentajeErrores + "%");
     }
 }
